@@ -1,0 +1,15 @@
+name = "sprint-planning-agent"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[ai]
+binding = "AI"
+
+[[durable_objects.bindings]]
+name = "AGENT"
+class_name = "SprintPlanningAgent"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["SprintPlanningAgent"]
